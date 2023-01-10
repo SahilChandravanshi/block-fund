@@ -1,3 +1,4 @@
+// ------------------------ Create a Campaign page --------------------------------
 import React, { useState, useCallback } from "react";
 import Layout from "../../components/Layout";
 import { Form, Button, Input, Message, Breadcrumb } from "semantic-ui-react";

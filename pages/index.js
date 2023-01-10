@@ -1,3 +1,4 @@
+// ----------------- Home page ----------------------------------
 import React from "react";
 import { useQuery, dehydrate, QueryClient } from "react-query";
 import factory from "../ethereum/factory";

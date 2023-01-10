@@ -30,6 +30,7 @@ const ContributeForm = ({ campaignAddress }) => {
   );
 
   return (
+    // ------------------ Contribute field on campaign details page ----------------
     <Form onSubmit={onSubmit} error={isError}>
       <Form.Field>
         <label>Amount to Contribute</label>
