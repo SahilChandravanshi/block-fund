@@ -1,11 +1,12 @@
 import React from "react";
 import { Menu } from "semantic-ui-react";
 import Link from "next/link";
+// import "../styles/header..css"
 
 const Header = () => (
-  <Menu style={{ marginTop: "10px" }}>
+  <Menu style={{ marginTop: "10px" }} >
     <Link href="/">
-      <a className="item">Block Fund</a>
+      <a className="item">🪙 Block Fund</a>
     </Link>
     <Menu.Menu position="right">
       <Link href="/">

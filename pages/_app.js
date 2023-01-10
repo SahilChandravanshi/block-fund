@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { Hydrate } from "react-query/hydration";
 import { useState } from "react";
+import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
