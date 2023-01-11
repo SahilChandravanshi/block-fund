@@ -44,7 +44,7 @@ const ContributeForm = ({ campaignAddress }) => {
       </Form.Field>
       <Message error header="Oops!" content={error?.message} />
 
-      <Button loading={isLoading} primary style={{backgroundColor:"#FFBF69", color:"#333333"}}>
+      <Button loading={isLoading} primary style={{backgroundColor:"#2ec4b6", color:"white"}}>
         Contribute
       </Button>
     </Form>

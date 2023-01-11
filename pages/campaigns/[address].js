@@ -93,7 +93,7 @@ const CampaignShow = () => {
               <Grid.Column>
                 <Link href={`/campaigns/${router.query.address}/requests`}>
                   <a>
-                    <Button style={{ backgroundColor: "#2ec4b6", color: "#333333" }}>View Withdraw Requests & Description</Button>
+                    <Button style={{ backgroundColor: "#ffbf69", color: "#333333" }}>View Withdraw Requests & Description</Button>
                   </a>
                 </Link>
               </Grid.Column>

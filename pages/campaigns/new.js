@@ -37,23 +37,27 @@ const CampaignNew = () => {
         <Breadcrumb.Divider />
         <Breadcrumb.Section active>New</Breadcrumb.Section>
       </Breadcrumb>
-      <h3>Create a Campaign</h3>
-      <Form onSubmit={onSubmit} error={isError}>
-        <Form.Field>
-          <label>Minimum contribution</label>
-          <Input
-            value={minContribution}
-            onChange={({ target: { value } }) => setMinContribution(value)}
-            label="wei"
-            labelPosition="right"
-            disabled={isLoading}
-          />
-        </Form.Field>
-        <Message error header="Oops!" content={error?.message} />
-        <Button loading={isLoading} primary>
-          Create
-        </Button>
-      </Form>
+      <h3 style={{ textAlign: "center", fontSize: "2.5rem", marginBottom: "2rem" }}>Create a New Campaign 📢</h3>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Form onSubmit={onSubmit} error={isError} style={{ boxShadow: "0px 1px 12px rgba(0,0,0,0.1)", borderRadius: "12px", padding: "3rem", width: "50%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <Form.Field>
+            <label>Minimum Contribution Amount</label>
+            <Input
+              value={minContribution}
+              onChange={({ target: { value } }) => setMinContribution(value)}
+              label="wei"
+              labelPosition="right"
+              disabled={isLoading}
+            />
+          </Form.Field>
+          <Message error header="Oops!" content={error?.message} />
+          <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
+            <Button loading={isLoading} primary style={{color:"white", backgroundColor:"#2ec4b6", width:"10rem"}}>
+              Create
+            </Button>
+          </div>
+        </Form>
+      </div>
     </Layout>
   );
 };
