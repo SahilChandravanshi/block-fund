@@ -31,11 +31,12 @@ const ContributeForm = ({ campaignAddress }) => {
 
   return (
     // ------------------ Contribute field on campaign details page ----------------
-    <Form onSubmit={onSubmit} error={isError}>
+    <Form onSubmit={onSubmit} error={isError} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" , gap:"2rem"}}>
+      <div className="contribute_now" style={{ color: "#2ec4b6", fontSize: "3rem", fontWeight: "600",lineHeight:"3rem"}}>Contribute Now!</div>
       <Form.Field>
-        <label>Amount to Contribute</label>
+        <label style={{ textAlign: "center" }}>Amount to Contribute</label>
         <Input
-          label="Ether"
+          label="ETH"
           labelPosition="right"
           value={contributionValue}
           onChange={({ target: { value } }) => setContributionValue(value)}
@@ -43,7 +44,7 @@ const ContributeForm = ({ campaignAddress }) => {
       </Form.Field>
       <Message error header="Oops!" content={error?.message} />
 
-      <Button loading={isLoading} primary>
+      <Button loading={isLoading} primary style={{backgroundColor:"#FFBF69", color:"#333333"}}>
         Contribute
       </Button>
     </Form>

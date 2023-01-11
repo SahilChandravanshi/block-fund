@@ -28,8 +28,8 @@ const CampaignIndex = () => {
   );
 
   return (
-    <Layout>
-      <Link href="/campaigns/new">
+    <Layout style={{  }}>
+      {/* <Link href="/campaigns/new">
         <a>
           <Button
             floated="right"
@@ -38,8 +38,8 @@ const CampaignIndex = () => {
             primary
           />
         </a>
-      </Link>
-      <Card.Group items={campaigns} />
+      </Link> */}
+      <Card.Group items={campaigns} style={{ color: "#2ec4b6"}} />
     </Layout>
   );
 };

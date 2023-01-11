@@ -4,16 +4,13 @@ import Link from "next/link";
 // import "../styles/header..css"
 
 const Header = () => (
-  <Menu style={{ marginTop: "10px" }} >
+  <Menu style={{ marginTop: "10px", height: "55px", border:"none", boxShadow:"0px 1px #cbf3f0", borderRadius:"0"}} >
     <Link href="/">
-      <a className="item">🪙 Block Fund</a>
+      <a className="item " style={{ backgroundColor: "#2ec4b6", fontSize:"1.4rem", fontWeight:"600", color:"white"  }}>🪙 Block Fund</a>
     </Link>
     <Menu.Menu position="right">
-      <Link href="/">
-        <a className="item">Campaigns</a>
-      </Link>
       <Link href="/campaigns/new">
-        <a className="item">+</a>
+        <a className="item"> <span style={{ }}>➕</span> Create Campaign</a>
       </Link>
     </Menu.Menu>
   </Menu>

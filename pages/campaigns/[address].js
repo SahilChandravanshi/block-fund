@@ -38,31 +38,35 @@ const CampaignShow = () => {
             meta: "Address of Manager",
             description:
               "The Manager created this campaign and can create requests to withdraw money",
-            style: { overflowWrap: "break-word" },
+            style: { overflowWrap: "break-word", width: "600px", boxShadow: "0px 1px 12px rgba(0,0,0,0.1)" ,borderRadius: "12px"},
           },
           {
             header: summaryData?.minimumContribution,
             meta: "Minimum contribution (wei)",
             description:
               "You must contribute at least this much wei to become an approver",
+            style: { overflowWrap: "break-word", width: "600px", boxShadow: "0px 1px 12px rgba(0,0,0,0.1)" ,borderRadius: "12px"},
           },
           {
             header: summaryData?.requestsCount,
             meta: "Number of Requests",
             description:
               "A request tries to withdraw money from the contract. Request must be approved by approvers",
+            style: { boxShadow: "0px 1px 12px rgba(0,0,0,0.1)",borderRadius: "12px" },
           },
           {
             header: summaryData?.approversCount,
             meta: "Number of Approvers",
             description:
               "Number of people who have already contributes to the campaign",
+            style: { boxShadow: "0px 1px 12px rgba(0,0,0,0.1)",borderRadius: "12px" },
           },
           {
             header: web3.utils.fromWei(summaryData?.balance, "ether"),
             meta: "Campaign Balance (ether)",
             description:
               "The balance is how much money this campaign has left to spend",
+            style: { overflowWrap: "break-word", width: "600px", boxShadow: "0px 1px 12px rgba(0,0,0,0.1)",borderRadius: "12px" },
           },
         ];
       },
@@ -78,22 +82,22 @@ const CampaignShow = () => {
       </Breadcrumb>
       <h3>Campaign Details</h3>
       <Grid>
-        <Grid.Row>
-          <Grid.Column width={10}>
-            <Card.Group items={summary} />
+        <Grid.Row >
+          <Grid.Column width={10} >
+            <Card.Group items={summary} style={{ display: "flex" }} />
           </Grid.Column>
-          <Grid.Column width={6}>
-            <ContributeForm campaignAddress={router.query.address} />
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column>
-            <Link href={`/campaigns/${router.query.address}/requests`}>
-              <a>
-                <Button primary>View Requests</Button>
-              </a>
-            </Link>
+          {/* Amount contribution field */}
+          <Grid.Column width={6} style={{ boxShadow: "0px 1px 12px rgba(0,0,0,0.1)", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "3rem", alignItems: "center", padding: "4rem 0rem 5rem 0rem", height: "30rem" ,}}>
+            <ContributeForm campaignAddress={router.query.address}/>
+            <Grid.Row >
+              <Grid.Column>
+                <Link href={`/campaigns/${router.query.address}/requests`}>
+                  <a>
+                    <Button style={{ backgroundColor: "#2ec4b6", color: "#333333" }}>View Withdraw Requests & Description</Button>
+                  </a>
+                </Link>
+              </Grid.Column>
+            </Grid.Row>
           </Grid.Column>
         </Grid.Row>
       </Grid>
