@@ -1,3 +1,4 @@
+// -------------------------- New Request page -------------------------------------
 import React, { useState, useCallback } from "react";
 import Layout from "../../../../components/Layout";
 import Link from "next/link";
@@ -52,40 +53,40 @@ const NewRequest = () => {
         <Breadcrumb.Divider />
         <Breadcrumb.Section active>New</Breadcrumb.Section>
       </Breadcrumb>
-      <h3>Create a Request</h3>
-      <Form onSubmit={onSubmit} error={isError}>
-        <Form.Field>
-          <label>Description</label>
-          <Input
-            value={description}
-            onChange={({ target: { value } }) => setDescription(value)}
-          />
-        </Form.Field>
-
-        <Form.Field>
-          <label>Value in Ether</label>
-          <Input
-            label="Ether"
-            labelPosition="right"
-            value={value}
-            onChange={({ target: { value } }) => setValue(value)}
-          />
-        </Form.Field>
-
-        <Form.Field>
-          <label>Recipient</label>
-          <Input
-            value={recipient}
-            onChange={({ target: { value } }) => setRecipient(value)}
-          />
-        </Form.Field>
-
-        <Message error header="Oops!" content={error?.message} />
-
-        <Button loading={isLoading} primary>
-          Create
-        </Button>
-      </Form>
+      <h3 style={{textAlign:"center",fontSize:"2.5rem", marginBottom:"2rem"}}>Create a Withdraw Request 💸</h3>
+      <div style={{display:"flex", justifyContent:"center"}}>
+        <Form onSubmit={onSubmit} error={isError} style={{boxShadow:"0px 1px 12px rgba(0,0,0,0.1)",borderRadius:"12px", padding:"3rem", width:"50%",display:"flex", flexDirection:"column", justifyContent:"center"}}>
+          <Form.Field >
+            <label>Request Description</label>
+            <Input
+              value={description}
+              onChange={({ target: { value } }) => setDescription(value)}
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Amount in Ether</label>
+            <Input
+              label="Ether"
+              labelPosition="right"
+              value={value}
+              onChange={({ target: { value } }) => setValue(value)}
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Recipient Wallet Address</label>
+            <Input
+              value={recipient}
+              onChange={({ target: { value } }) => setRecipient(value)}
+            />
+          </Form.Field>
+          <Message error header="Oops!" content={error?.message} />
+          <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
+            <Button loading={isLoading} primary style={{color:"white", backgroundColor:"#2ec4b6", width:"20rem"}}>
+              Create Request
+            </Button>
+          </div>
+        </Form>
+      </div>
     </Layout>
   );
 };
