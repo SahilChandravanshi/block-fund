@@ -70,12 +70,12 @@ const RequestPage = () => {
       <h3>Requests</h3>
       <Link href={`/campaigns/${address}/requests/new`}>
         <a>
-          <Button primary floated="right" style={{ marginBottom: 10 }}>
-            Add Request
+          <Button primary floated="right" style={{ marginBottom: 10,color:"#333333",backgroundColor:"#FFBF69" }}>
+          ➕ Add Withdraw Request
           </Button>
         </a>
       </Link>
-      <Table>
+      <Table style={{border:"0px",boxShadow:"0px 1px 12px rgba(0,0,0,0.1)"}}>
         <Header>
           <Row>
             <HeaderCell>ID</HeaderCell>
