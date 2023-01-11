@@ -5,6 +5,7 @@ import factory from "../ethereum/factory";
 import { Card, Button } from "semantic-ui-react";
 import Layout from "../components/Layout";
 import Link from "next/link";
+// import HomeDesc from "../components/HomeDesc";
 
 export const getDeployedCampaigns = factory.methods.getDeployedCampaigns().call;
 const campaignListKey = "campaign-list";
@@ -39,9 +40,13 @@ const CampaignIndex = () => {
           />
         </a>
       </Link> */}
+        <h3 style={{ textAlign: "center", fontSize: "2.5rem", marginBottom: "2rem" }}>Crowdfunding With Powers of Blockchain 🫰🏼</h3>
       <div style={{ display:"flex", justifyContent:"center" }}>
         <Card.Group items={campaigns} style={{ color: "#776ea2", width: "85%" }} />
       </div>
+      {/* <div>
+        <HomeDesc/>
+      </div> */}
     </Layout>
   );
 };
