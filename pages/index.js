@@ -28,7 +28,7 @@ const CampaignIndex = () => {
   );
 
   return (
-    <Layout style={{  }}>
+    <Layout >
       {/* <Link href="/campaigns/new">
         <a>
           <Button
@@ -39,7 +39,9 @@ const CampaignIndex = () => {
           />
         </a>
       </Link> */}
-      <Card.Group items={campaigns} style={{ color: "#2ec4b6"}} />
+      <div style={{ display:"flex", justifyContent:"center" }}>
+        <Card.Group items={campaigns} style={{ color: "#776ea2", width: "85%" }} />
+      </div>
     </Layout>
   );
 };
