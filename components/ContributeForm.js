@@ -32,7 +32,7 @@ const ContributeForm = ({ campaignAddress }) => {
   return (
     // ------------------ Contribute field on campaign details page ----------------
     <Form onSubmit={onSubmit} error={isError} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" , gap:"2rem"}}>
-      <div className="contribute_now" style={{ color: "#2ec4b6", fontSize: "3rem", fontWeight: "600",lineHeight:"3rem"}}>Contribute Now!</div>
+      {/* <div className="contribute_now" style={{ color: "#2ec4b6", fontSize: "3rem", fontWeight: "600",lineHeight:"3rem"}}>Contribute Now!</div>
       <Form.Field>
         <label style={{ textAlign: "center" }}>Amount to Contribute</label>
         <Input
@@ -46,7 +46,7 @@ const ContributeForm = ({ campaignAddress }) => {
 
       <Button loading={isLoading} primary style={{backgroundColor:"#2ec4b6", color:"white"}}>
         Contribute
-      </Button>
+      </Button> */}
     </Form>
   );
 };

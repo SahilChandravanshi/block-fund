@@ -11,7 +11,6 @@
 		"deploy-contracts": "env-cmd node ethereum/deploy.js"
 	},
 	"author": "Sahil Chandravanshi",
-	"license": "MIT license",
 	"dependencies": {
 		"env-cmd": "^10.1.0",
 		"fs-extra": "^10.0.0",
